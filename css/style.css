@@ -41,13 +41,14 @@ main {
 
 /* --- Styles pour l'En-tête interne de l'Article (Celui qui est DANS <main>) --- */
 .head {
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     font-size: 0.9em;       
-    color: #888;           
-    margin-top: 5px;
-    font-style: italic;
+    color: #888;
 }
 
 /* Ajustement des titres dans le <main> */
@@ -70,6 +71,17 @@ a {
 
 a:hover {
     color: #000000;
+}
+
+/* Style pour supprimer le soulignement sur le lien de retour à l'accueil */
+.no-underline {
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+/* Vous pouvez aussi le mettre en gras ou ajuster la couleur pour le faire ressortir si vous le souhaitez */
+.home-link a {
+    font-weight: bold;
+    color: #4a4a4a; /* Même gris soutenu que vos autres liens */
 }
 
 footer {
