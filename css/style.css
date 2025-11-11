@@ -190,3 +190,48 @@ blockquote cite {
     color: #888;
 }
 
+/* --- Style pour les images dans le contenu principal --- */
+main img {
+    max-width: 100%; 
+    height: auto;
+    border: none;
+    padding: 0;
+    display: block; 
+    margin: 1em auto;
+}
+
+/* --- Styles pour le conteneur de figure et la légende --- */
+
+/* 1. Conteneur <figure> */
+figure {
+    max-width: 100%;
+    margin: 2em auto; /* Ajoute des marges verticales pour séparer du texte */
+    padding: 0;
+    display: block; 
+}
+
+/* 2. Style de la Légende <figcaption> */
+figcaption {
+    text-align: center; /* Centre la légende sous le contenu */
+    margin-top: 10px; /* Espace la légende du média */
+    padding-top: 5px;
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666; 
+}
+
+/* 3. Adaptation des Images à l'intérieur de <figure> */
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 5px auto; /* Centre l'image et réduit la marge du bas avant la légende */
+}
+
+/* 4. Adaptation des Tableaux à l'intérieur de <figure> */
+figure table {
+    width: 100%;
+    margin-bottom: 5px; /* Réduit l'espace avant la légende */
+    /* Ajoutez ici d'autres styles de tableau si nécessaire */
+}
+
