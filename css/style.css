@@ -3,67 +3,58 @@
 
 /* --- 2. Fond de l'écran (Dégradé diagonal) --- */
 body {
-    /* Propriété pour le fond en bandes diagonales grises */
+    /* Fond en bandes diagonales grises inchangé */
     background: repeating-linear-gradient(
         45deg,
-        #f0f0f0, /* Gris très clair */
-        #f0f0f0 15px, /* Largeur de la bande claire */
-        #e0e0e0 15px, /* Gris légèrement plus foncé */
-        #e0e0e0 30px /* Fin de la bande foncée */
+        #f0f0f0, 
+        #f0f0f0 15px, 
+        #e0e0e0 15px, 
+        #e0e0e0 30px 
     );
     
-    /* Police par défaut pour tout le corps de la page */
     font-family: 'Old Standard TT', serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
-    font-size: 1.1rem; /* Augmente légèrement la taille pour la lisibilité A4 */
+    font-size: 1.1rem; 
 }
 
-/* --- 3. Style du Conteneur (Simulant une Page A4) --- */
+/* --- 3. Style du Conteneur (Page Continue - Simulant un Parchemin) --- */
 main, header {
-    /* Ces éléments contiendront votre contenu (articles, accueil, etc.) */
+    /* Largeur de la page A4 conservée */
+    width: 210mm; 
     
-    /* Dimensions A4 approximatives et centrées */
-    width: 210mm; /* Largeur de la page A4 */
-    min-height: 297mm; /* Hauteur minimale de la page A4 */
-    max-width: 90%; /* S'assure que ça fonctionne sur petits écrans (tablettes/mobiles) */
+    /* ATTENTION : suppression de 'min-height: 297mm' pour une hauteur illimitée */
     
-    margin: 20px auto; /* Centre le conteneur horizontalement, espace vertical */
-    padding: 30mm 20mm; /* Marges intérieures pour simuler les bords de la page */
+    max-width: 90%; 
     
-    /* Fond Blanc pour simuler la feuille de papier */
+    margin: 20px auto; 
+    padding: 30mm 20mm; /* Marges intérieures conservées */
+    
     background-color: white;
-    
-    /* Effet d'élévation pour détacher la "feuille" du fond */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
+
+    /* Assurez-vous qu'ils s'affichent correctement */
+    display: block; 
+    box-sizing: border-box; /* S'assurer que le padding est inclus dans la width/height */
 }
 
-/* --- 4. Styles pour les Liens et autres --- */
+/* --- 4. Styles pour les Liens et autres (Inchangement) --- */
 a {
-    color: #4a4a4a; /* Un gris soutenu pour les liens, plus classique */
-    text-decoration: underline; /* Souligné pour un look classique */
+    color: #4a4a4a;
+    text-decoration: underline;
 }
 
 a:hover {
     color: #000000;
 }
 
-/* Le pied de page peut rester en bas du corps, hors de la "page A4" */
 footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
     color: #555;
-    background: none; /* S'assure qu'il n'a pas de fond blanc */
+    background: none; 
 }
-
-/* * IMPORTANT : 
-  * Assurez-vous d'envelopper TOUT le contenu de votre page 
-  * (sauf le footer si vous le voulez en bas de l'écran) 
-  * dans les balises <header> ou <main> pour que l'effet A4 s'applique.
-*/
-
-
