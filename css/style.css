@@ -165,8 +165,11 @@ blockquote cite {
     border-top: 1px solid #ddd;
     padding-top: 15px;
     margin-top: 40px;
-    list-style: none; /* Supprime les chiffres automatiques de la liste ordonnée */
-    padding-left: 0;
+    
+    /* MODIFICATION IMPORTANTE : Nous réactivons le style de liste par défaut, 
+       et nous ajoutons un padding à gauche pour que les numéros apparaissent. */
+    list-style: decimal; /* Réactive la numérotation par défaut (1, 2, 3...) */
+    padding-left: 20px; /* Ajoute un retrait pour les numéros */
 }
 
 /* Style de chaque élément de note */
@@ -175,8 +178,11 @@ blockquote cite {
     line-height: 1.4;
     margin-bottom: 10px;
     color: #555;
-    text-indent: -1.5em; /* Permet d'aligner la première ligne à gauche */
-    padding-left: 1.5em; /* Crée l'espace pour le numéro */
+    
+    /* SUPPRIMER les propriétés text-indent et padding-left ici. 
+       Celles-ci surchargeaient l'alignement automatique de la liste. */
+    /* text-indent: -1.5em; */
+    /* padding-left: 1.5em; */ 
 }
 
 /* Style de l'icône de retour (↩) */
