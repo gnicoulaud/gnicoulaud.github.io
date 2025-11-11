@@ -46,6 +46,7 @@ footer {
 .head {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     width: 100%;
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
@@ -110,36 +111,30 @@ code {
 
 /* --- Style pour les blockquote --- */
 blockquote {
-    /* 1. Retrait et Marges */
-    margin: 0px 0; /* Marge autour du bloc */
-    padding: 5px 20px 5px 30px; /* Padding interne, plus large à gauche */
-    
-    /* 2. Style Visuel Discret */
-    background-color: #fafafa; /* Fond très léger, presque blanc */
-    border-left: 3px solid #b8b8b8; /* Bordure verticale grise pour marquer la citation */
-    
-    /* 3. Typographie */
-    font-style: italic; /* L'italique est classique pour les citations */
-    color: #555; /* Couleur de texte gris moyen, plus doux que le noir */
+    /* Rétablissons un peu de marge verticale (par exemple 1em) pour séparer la citation du texte */
+    margin: 1em 0; 
+    padding: 1px 20px 1px 30px; 
+    background-color: #fafafa; 
+    border-left: 3px solid #b8b8b8; 
+    font-style: italic; 
+    color: #555; 
     line-height: 1.5;
-    
-    /* 4. Retrait de l'alignement A4 */
-    /* Décale légèrement la citation vers la droite, pour la différencier du corps du texte */
     margin-left: 10px; 
 }
 
+/* Supprime la marge sous le dernier paragraphe de la citation */
 blockquote p:last-child {
     margin-bottom: 0;
 }
 
 /* Style optionnel pour la source de la citation (<cite>) */
 blockquote cite {
-    display: block; /* Force la source sur une nouvelle ligne */
+    display: block; 
     text-align: right;
     font-style: normal;
     font-size: 0.9em;
     color: #777;
-    margin-top: 2px;
+    margin-top: 0;
 }
 
 /* --- Styles pour les footnotes --- */
@@ -176,7 +171,7 @@ blockquote cite {
 .footnotes li {
     font-size: 0.9em; /* Rendre le texte des notes légèrement plus petit */
     line-height: 1.4;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #555;
     
     /* SUPPRIMER les propriétés text-indent et padding-left ici. 
