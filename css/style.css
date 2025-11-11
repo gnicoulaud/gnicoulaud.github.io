@@ -39,7 +39,7 @@ main {
 }
 
 /* --- Styles pour l'En-tête interne de l'Article (Celui qui est DANS <main>) --- */
-header {
+.head {
     padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
