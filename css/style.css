@@ -283,11 +283,5 @@ th {
     font-weight: bold;
     color: #444;
     border-bottom: 2px solid #ddd; /* Bordure plus épaisse sous l'en-tête */
-    text-transform: uppercase;
-}
-
-/* Style pour la dernière ligne (supprime la bordure) */
-tr:last-child td {
-    border-bottom: none;
 }
 
