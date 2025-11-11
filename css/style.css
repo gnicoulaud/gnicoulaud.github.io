@@ -111,14 +111,22 @@ code {
 
 /* --- Style pour les blockquote --- */
 blockquote {
-    /* Rétablissons un peu de marge verticale (par exemple 1em) pour séparer la citation du texte */
+    /* Mise en page pour le centrage vertical */
+    display: flex; /* Active Flexbox */
+    flex-direction: column; /* Empile les éléments verticalement (citation puis cite) */
+    justify-content: center; /* **Centre verticalement** les éléments si l'espace le permet */
+    
+    /* Retrait et Marges */
     margin: 1em 0; 
-    padding: 1px 20px 1px 30px; 
+    padding: 15px 20px 15px 30px; /* Retour à un padding vertical plus généreux (15px) */
+    
     background-color: #fafafa; 
     border-left: 3px solid #b8b8b8; 
+    
     font-style: italic; 
     color: #555; 
     line-height: 1.5;
+    
     margin-left: 10px; 
 }
 
@@ -134,7 +142,8 @@ blockquote cite {
     font-style: normal;
     font-size: 0.9em;
     color: #777;
-    margin-top: 0;
+    margin-top: 0 !important; /* Marge supérieure forcée à zéro */
+    padding-top: 5px; /* Petit espacement interne pour la source */
 }
 
 /* --- Styles pour les footnotes --- */
