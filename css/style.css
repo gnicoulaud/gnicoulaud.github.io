@@ -1,5 +1,4 @@
-/* 1. Importation de la police Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+/* 1. Importation des fontes */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* --- 2. Fond de l'écran (Dégradé diagonal) --- */
@@ -21,37 +20,40 @@ body {
     font-size: 1.1rem; 
 }
 
-/* --- 3. Style du Conteneur (Page Continue - Simulant un Parchemin) --- */
-/* Appliqué à MAIN et à l'en-tête principal (header) */
+/* --- Style du conteneur <main> --- */
 main { 
-    /* Largeur de la page A4 conservée */
     width: 210mm; 
     max-width: 90%; 
-    
     margin: 20px auto; 
     padding: 30mm 20mm; 
-    
     background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
-
     display: block; 
     box-sizing: border-box; 
 }
 
-/* --- Styles pour l'En-tête interne de l'Article (Celui qui est DANS <main>) --- */
+/* --- Style du <footer> à l'extérieure de <main> --- */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    color: #555;
+    background: none; 
+}
+
+/* --- Styles pour l'en-tête interne des articles --- */
 .head {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     font-size: 0.9em;       
     color: #888;
 }
 
-/* Ajustement des titres dans le <main> */
+/* --- Titres --- */
 h1 {
     font-size: 2.2rem;
     margin-top: 0;
@@ -63,7 +65,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* --- 4. Styles pour les Liens et autres --- */
+/* --- Liens --- */
 a {
     color: #4a4a4a;
     text-decoration: underline;
@@ -73,37 +75,22 @@ a:hover {
     color: #000000;
 }
 
-/* Style pour supprimer le soulignement sur le lien de retour à l'accueil */
+/* lien de retour à l'accueil */
 .no-underline {
-    text-decoration: none; /* Supprime le soulignement */
+    text-decoration: none;
 }
 
-/* Vous pouvez aussi le mettre en gras ou ajuster la couleur pour le faire ressortir si vous le souhaitez */
 .home-link a {
     font-weight: bold;
-    color: #4a4a4a; /* Même gris soutenu que vos autres liens */
+    color: #4a4a4a;
 }
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-    color: #555;
-    background: none; 
-}
-
-/* ------------------------------------------------------------------- */
-/* --- NOUVEAUX STYLES POUR LES BLOCS DE CODE ET CODE EN LIGNE (Consolas) --- */
-/* ------------------------------------------------------------------- */
-
-/* Balise <code> (code en ligne) et <pre> (blocs de code) */
+/* --- Code --- */
 code, pre {
-    /* Consolas pour la police mono-espacée */
     font-family: "Inconsolata", "Courier New", monospace;
     font-size: 0.9em;
 }
 
-/* Balise <pre> (Blocs de code multi-lignes) */
 pre {
     background-color: #f7f7f7; 
     border: 1px solid #ddd;
@@ -114,7 +101,6 @@ pre {
     white-space: pre-wrap; 
 }
 
-/* Balise <code> (Code en ligne) */
 code {
     background-color: #eee; 
     padding: 2px 4px;
