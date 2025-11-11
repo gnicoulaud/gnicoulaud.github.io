@@ -54,6 +54,18 @@ footer {
     color: #888;
 }
 
+/* --- Style pour le Chapô (lead paragraph) --- */
+.lead {
+    font-size: 1.25rem; /* Légèrement plus grand que le texte normal (1.1rem) */
+    font-weight: bold;  /* Rend le texte en gras pour attirer l'attention */
+    line-height: 1.5;
+    
+    margin-top: 20px;    /* Sépare du titre/méta-données */
+    margin-bottom: 30px; /* Ajoute un espace important avant le premier paragraphe ou titre */
+    
+    color: #333; /* Garde la couleur de texte principale */
+}
+
 /* --- Titres --- */
 h1 {
     font-size: 2.2rem;
@@ -238,5 +250,44 @@ figure img {
     margin: 0 auto 5px auto; 
     border: none;
     padding: 0;
+}
+
+/* --- Styles pour les tableaux --- */
+
+table {
+    /* Assure que le tableau occupe toute la largeur de son conteneur (<main> ou <figure>) */
+    width: 100%;
+    
+    /* Retire l'espace par défaut et collapse les bordures pour un look propre */
+    border-collapse: collapse;
+    border-spacing: 0;
+    
+    margin: 2em 0; /* Ajoute des marges verticales pour séparer le tableau du texte */
+    font-size: 0.95em;
+    color: #333;
+}
+
+/* Cellules de tableau (<th> et <td>) */
+th, td {
+    padding: 8px 12px; /* Espacement intérieur des cellules */
+    text-align: left; /* Alignement du texte à gauche */
+    
+    /* Ligne de séparation horizontale discrète */
+    border-bottom: 1px solid #eee; 
+}
+
+/* En-têtes de colonnes (<th>) */
+th {
+    /* Style distinctif pour l'en-tête, sans être trop intrusif */
+    background-color: #f8f8f8; 
+    font-weight: bold;
+    color: #444;
+    border-bottom: 2px solid #ddd; /* Bordure plus épaisse sous l'en-tête */
+    text-transform: uppercase;
+}
+
+/* Style pour la dernière ligne (supprime la bordure) */
+tr:last-child td {
+    border-bottom: none;
 }
 
