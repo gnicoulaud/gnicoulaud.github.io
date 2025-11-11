@@ -108,7 +108,7 @@ code {
     white-space: nowrap; 
 }
 
-/* --- Style pour les Citations en Bloc (blockquote) --- */
+/* --- Style pour les blockquote --- */
 blockquote {
     /* 1. Retrait et Marges */
     margin: 0px 0; /* Marge autour du bloc */
@@ -132,7 +132,7 @@ blockquote p:last-child {
     margin-bottom: 0;
 }
 
-/* Style optionnel pour la source de la citation (si vous utilisez <cite>) */
+/* Style optionnel pour la source de la citation (<cite>) */
 blockquote cite {
     display: block; /* Force la source sur une nouvelle ligne */
     text-align: right;
@@ -142,7 +142,7 @@ blockquote cite {
     margin-top: 2px;
 }
 
-/* --- Styles pour les Notes de Bas de Page (Footnotes) --- */
+/* --- Styles pour les footnotes --- */
 
 /* 1. Neutraliser l'impact de l'exposant sur l'interligne */
 .fn-call {
