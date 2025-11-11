@@ -1,68 +1,69 @@
-/* --- Styles de base et Réinitialisation --- */
+/* 1. Importation de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* --- 2. Fond de l'écran (Dégradé diagonal) --- */
 body {
-    font-family: Arial, sans-serif;
+    /* Propriété pour le fond en bandes diagonales grises */
+    background: repeating-linear-gradient(
+        45deg,
+        #f0f0f0, /* Gris très clair */
+        #f0f0f0 15px, /* Largeur de la bande claire */
+        #e0e0e0 15px, /* Gris légèrement plus foncé */
+        #e0e0e0 30px /* Fin de la bande foncée */
+    );
+    
+    /* Police par défaut pour tout le corps de la page */
+    font-family: 'Old Standard TT', serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
     color: #333;
+    font-size: 1.1rem; /* Augmente légèrement la taille pour la lisibilité A4 */
 }
 
+/* --- 3. Style du Conteneur (Simulant une Page A4) --- */
+main, header {
+    /* Ces éléments contiendront votre contenu (articles, accueil, etc.) */
+    
+    /* Dimensions A4 approximatives et centrées */
+    width: 210mm; /* Largeur de la page A4 */
+    min-height: 297mm; /* Hauteur minimale de la page A4 */
+    max-width: 90%; /* S'assure que ça fonctionne sur petits écrans (tablettes/mobiles) */
+    
+    margin: 20px auto; /* Centre le conteneur horizontalement, espace vertical */
+    padding: 30mm 20mm; /* Marges intérieures pour simuler les bords de la page */
+    
+    /* Fond Blanc pour simuler la feuille de papier */
+    background-color: white;
+    
+    /* Effet d'élévation pour détacher la "feuille" du fond */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+}
+
+/* --- 4. Styles pour les Liens et autres --- */
 a {
-    color: #007bff; /* Bleu standard pour les liens */
-    text-decoration: none;
+    color: #4a4a4a; /* Un gris soutenu pour les liens, plus classique */
+    text-decoration: underline; /* Souligné pour un look classique */
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #000000;
 }
 
-/* --- En-tête (Header) --- */
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    margin-bottom: 5px;
-}
-
-/* --- Contenu Principal (Main) --- */
-main {
-    padding: 20px;
-    max-width: 900px; /* Limite la largeur du contenu */
-    margin: 20px auto; /* Centre le contenu */
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-/* --- Section des Articles (Summary) --- */
-.article-summary {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
-
-.article-summary h3 {
-    margin-top: 0;
-    font-size: 1.5em;
-}
-
-.article-summary .date {
-    font-style: italic;
-    color: #777;
-    font-size: 0.9em;
-}
-
-/* --- Pied de Page (Footer) --- */
+/* Le pied de page peut rester en bas du corps, hors de la "page A4" */
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     margin-top: 30px;
-    color: #888;
-    border-top: 1px solid #eee;
+    color: #555;
+    background: none; /* S'assure qu'il n'a pas de fond blanc */
 }
+
+/* * IMPORTANT : 
+  * Assurez-vous d'envelopper TOUT le contenu de votre page 
+  * (sauf le footer si vous le voulez en bas de l'écran) 
+  * dans les balises <header> ou <main> pour que l'effet A4 s'applique.
+*/
+
+
