@@ -107,3 +107,83 @@ code {
     border-radius: 4px;
     white-space: nowrap; 
 }
+
+/* --- Style pour les Citations en Bloc (blockquote) --- */
+blockquote {
+    /* 1. Retrait et Marges */
+    margin: 0px 0; /* Marge autour du bloc */
+    padding: 5px 20px 5px 30px; /* Padding interne, plus large à gauche */
+    
+    /* 2. Style Visuel Discret */
+    background-color: #fafafa; /* Fond très léger, presque blanc */
+    border-left: 3px solid #b8b8b8; /* Bordure verticale grise pour marquer la citation */
+    
+    /* 3. Typographie */
+    font-style: italic; /* L'italique est classique pour les citations */
+    color: #555; /* Couleur de texte gris moyen, plus doux que le noir */
+    line-height: 1.5;
+    
+    /* 4. Retrait de l'alignement A4 */
+    /* Décale légèrement la citation vers la droite, pour la différencier du corps du texte */
+    margin-left: 10px; 
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Style optionnel pour la source de la citation (si vous utilisez <cite>) */
+blockquote cite {
+    display: block; /* Force la source sur une nouvelle ligne */
+    text-align: right;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* --- Styles pour les Notes de Bas de Page (Footnotes) --- */
+
+/* 1. Neutraliser l'impact de l'exposant sur l'interligne */
+.fn-call {
+    /* Ceci est l'astuce : force la hauteur de ligne et l'alignement pour ne pas affecter la ligne principale */
+    line-height: 1; 
+    vertical-align: baseline; 
+    position: relative; 
+    top: -0.5em; /* Ajuste légèrement la position verticale, comme un exposant */
+    font-size: 0.7em; /* Rend le numéro de note petit */
+}
+
+.fn-call a {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: inherit; /* Utilise la couleur du texte parent (plus discret) */
+}
+
+/* 2. Style de la liste des notes elle-même */
+.footnotes {
+    /* Séparateur visuel entre le texte de l'article et les notes */
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 40px;
+    list-style: none; /* Supprime les chiffres automatiques de la liste ordonnée */
+    padding-left: 0;
+}
+
+/* Style de chaque élément de note */
+.footnotes li {
+    font-size: 0.9em; /* Rendre le texte des notes légèrement plus petit */
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #555;
+    text-indent: -1.5em; /* Permet d'aligner la première ligne à gauche */
+    padding-left: 1.5em; /* Crée l'espace pour le numéro */
+}
+
+/* Style de l'icône de retour (↩) */
+.footnotes li a {
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 5px;
+    color: #888;
+}
+
