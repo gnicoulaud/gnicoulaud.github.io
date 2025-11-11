@@ -21,27 +21,47 @@ body {
 }
 
 /* --- 3. Style du Conteneur (Page Continue - Simulant un Parchemin) --- */
-main, header {
+/* Appliqué à MAIN et à l'en-tête principal (header) */
+main { 
     /* Largeur de la page A4 conservée */
     width: 210mm; 
-    
-    /* ATTENTION : suppression de 'min-height: 297mm' pour une hauteur illimitée */
-    
     max-width: 90%; 
     
     margin: 20px auto; 
-    padding: 30mm 20mm; /* Marges intérieures conservées */
+    padding: 30mm 20mm; 
     
     background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
 
-    /* Assurez-vous qu'ils s'affichent correctement */
     display: block; 
-    box-sizing: border-box; /* S'assurer que le padding est inclus dans la width/height */
+    box-sizing: border-box; 
 }
 
-/* --- 4. Styles pour les Liens et autres (Inchangement) --- */
+/* --- Styles pour l'En-tête interne de l'Article (Celui qui est DANS <main>) --- */
+header {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9em;       
+    color: #888;           
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Ajustement des titres dans le <main> */
+h1 {
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* --- 4. Styles pour les Liens et autres --- */
 a {
     color: #4a4a4a;
     text-decoration: underline;
@@ -57,4 +77,34 @@ footer {
     margin-top: 30px;
     color: #555;
     background: none; 
+}
+
+/* ------------------------------------------------------------------- */
+/* --- NOUVEAUX STYLES POUR LES BLOCS DE CODE ET CODE EN LIGNE (Consolas) --- */
+/* ------------------------------------------------------------------- */
+
+/* Balise <code> (code en ligne) et <pre> (blocs de code) */
+code, pre {
+    /* Consolas pour la police mono-espacée */
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+}
+
+/* Balise <pre> (Blocs de code multi-lignes) */
+pre {
+    background-color: #f7f7f7; 
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow-x: auto; 
+    border-radius: 4px;
+    line-height: 1.4;
+    white-space: pre-wrap; 
+}
+
+/* Balise <code> (Code en ligne) */
+code {
+    background-color: #eee; 
+    padding: 2px 4px;
+    border-radius: 4px;
+    white-space: nowrap; 
 }
